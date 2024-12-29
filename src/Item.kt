@@ -14,10 +14,12 @@ open class Item(val name: String, val price : Double, val description: String) {
         return  """
             Id : $id
             Name: $name
-            Price: R\$ ${String.format("%.2f", price)}
+            Price: R$ ${String.format("%.2f", price)}
             Description: $description
-            Quantity: $qtd
+            Quantity: $qtd 
+            
         """.trimIndent()
+
     }
 
     fun plusQtd(qtd : Int){

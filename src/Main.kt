@@ -43,9 +43,9 @@ fun main() {
 
             "2" -> {
 
-                for (i in donors.indices){
-                    println("Donor: $i")
-                    println(donors[i])
+                for (i in donors){
+
+                    println(i)
 
                 }
             }
@@ -60,8 +60,8 @@ fun main() {
                 println(FoodOrNot())
 
                 do{
-                    val y =  readLine()
-                    y?.uppercase()
+                    var y =  readLine()
+                    y = y?.uppercase()
                     var stop = true
 
                     when(y){
@@ -111,6 +111,8 @@ fun main() {
                 val qtd = readLine()?.toIntOrNull() ?: 0
 
                 val donation = Donation(donor, date, intId, qtd)
+                donor?.donated(qtd)
+                donation.incrementItem(items)
                 donations.add(donation)
 
             }
